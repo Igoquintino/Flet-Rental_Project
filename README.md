@@ -1,7 +1,3 @@
-Aqui está o texto atualizado com a seção de **Autor** no final:
-
----
-
 # **Projeto: Aluguel de Carrinhos de Brinquedo**
 
 Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo para crianças, oferecendo funcionalidades como cadastro de carrinhos, gerenciamento de clientes e controle de aluguéis.
@@ -75,7 +71,7 @@ Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo par
 **[Igo Quintino]**
 
 - 📧 Email: [igocastro.15@gmail.com]
-- 🌐 Portfólio ou Website: []
+- 🌐 Portfólio ou Website: [https://github.com/Igoquintino]
 - 💼 LinkedIn: [Seu LinkedIn (opcional)]
 ---
 
