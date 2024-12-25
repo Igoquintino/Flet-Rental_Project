@@ -68,11 +68,7 @@ Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo par
 
 ## **Autor**
 
-**[Igo Quintino]**
+**Igo Quintino**
 
-- 📧 Email: [igocastro.15@gmail.com]
-- 🌐 Portfólio ou Website: [https://github.com/Igoquintino]
-- 💼 LinkedIn: [Seu LinkedIn (opcional)]
----
-
-Se você quiser adicionar links reais ou mais informações na seção de Autor, é só me avisar! 😊
+- 📧 Email: igocastro.15@gmail.com
+- 🌐 Portfólio ou Website: https://github.com/Igoquintino
