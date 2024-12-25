@@ -62,8 +62,8 @@ Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo par
    python manage.py runserver
    ```
 
-7. Desenvolva a interface com o **Flet Framework**, consumindo as APIs criadas no backend.
-
+7. Desenvolver a interface com o **Flet Framework**, consumindo as APIs criadas no backend.  
+ainda precisar ser implementado
 ---
 
 ## **Autor**
