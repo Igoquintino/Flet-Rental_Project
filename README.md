@@ -31,13 +31,14 @@ Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo par
 
 1. Clone o repositório:
    ```bash
-   git clone <URL-do-repositorio>
+   git clone <URL-do-repositorio> #é so copiar a URL desse projeto aqui
    cd <diretorio-do-projeto>
    ```
 
 2. Ative um ambiente virtual:
    ```bash
-   python -m venv venv
+   python -m venv <nome-que-quiser>  
+   python3 -m venv <nome-que-quiser> # Sem os sinais de <>, porque em algumas máquinas o primeiro comando pode não funcionar devido à versão do Python instalada.
    source venv/bin/activate  # Para Linux/Mac
    venv\Scripts\activate  # Para Windows
    ```
@@ -50,16 +51,19 @@ Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo par
 4. Aplique as migrações do banco de dados:
    ```bash
    python manage.py migrate
+   python3 manage.py migrate # por conta da versão do python, use esse se preciso
    ```
 
 5. Crie um superusuário (opcional):
    ```bash
    python manage.py createsuperuser
+   python3 manage.py createsuperuser # por conta da versão do python, use esse se preciso
    ```
 
 6. Inicie o servidor:
    ```bash
    python manage.py runserver
+   python3 manage.py runserver # por conta da versão do python, use esse se preciso
    ```
 
 7. Desenvolver a interface com o **Flet Framework**, consumindo as APIs criadas no backend.  
