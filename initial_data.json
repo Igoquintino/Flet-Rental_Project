@@ -1,0 +1,66 @@
+[
+    {
+        "model": "api_rest.cliente",
+        "pk": 1,
+        "fields": {
+            "nome": "Maria Silva",
+            "email": "maria@example.com",
+            "telefone": "123456789",
+            "endereco": "Rua A, 123"
+        }
+    },
+    {
+        "model": "api_rest.cliente",
+        "pk": 2,
+        "fields": {
+            "nome": "João Souza",
+            "email": "joao@example.com",
+            "telefone": "987654321",
+            "endereco": "Rua B, 456"
+        }
+    },
+    {
+        "model": "api_rest.carrinho",
+        "pk": 1,
+        "fields": {
+            "nome": "Carrinho Elétrico Azul",
+            "categoria": "elétrico",
+            "estado": "disponível",
+            "data_aquisicao": "2023-06-15",
+            "preco_aluguel": 50.0
+        }
+    },
+    {
+        "model": "api_rest.carrinho",
+        "pk": 2,
+        "fields": {
+            "nome": "Carrinho Manual Vermelho",
+            "categoria": "manual",
+            "estado": "disponível",
+            "data_aquisicao": "2023-01-20",
+            "preco_aluguel": 30.0
+        }
+    },
+    {
+        "model": "api_rest.aluguel",
+        "pk": 1,
+        "fields": {
+            "carrinho": 1,
+            "cliente": 1,
+            "data_inicio": "2024-01-01",
+            "data_fim": "2024-01-10",
+            "status": "ativo"
+        }
+    },
+    {
+        "model": "api_rest.aluguel",
+        "pk": 2,
+        "fields": {
+            "carrinho": 2,
+            "cliente": 2,
+            "data_inicio": "2024-01-05",
+            "data_fim": "2024-01-15",
+            "status": "finalizado"
+        }
+    }
+]
