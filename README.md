@@ -40,7 +40,7 @@ Este projeto tem como objetivo gerenciar o aluguel de carrinhos de brinquedo par
    python -m venv <nome-que-quiser>  
    python3 -m venv <nome-que-quiser> # Sem os sinais de <>, porque em algumas máquinas o primeiro comando pode não funcionar devido à versão do Python instalada.
    source venv/bin/activate  # Para Linux/Mac
-   venv\Scripts\activate  # Para Windows
+   <nome-que-quiser>\Scripts\activate  # Para Windows
    ```
 
 3. Instale as dependências:
