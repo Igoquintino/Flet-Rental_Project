@@ -7,6 +7,8 @@ urlpatterns = [
     path('customers/create/', views.createCustomer, name="create_customer"),
     path('customers/<str:nick>/', views.get_by_nick, name="get_by_nick"),
     path('customers/<int:customer_id>/delete/', views.deleteCustomer, name="delete_customer"),
+    path('customers/delete-by-name/<str:name>/', views.deleteCustomerByName, name="delete_customer_by_name"),
+
 
     # Carrinhos
     path('carts/', views.getCarts, name="get_all_carts"),

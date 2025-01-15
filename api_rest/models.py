@@ -13,7 +13,7 @@ class Carrinho(models.Model):
         ('manutenção', 'Em Manutenção'),
     ]
     
-    nome = models.CharField(max_length=100, default='')
+    nome = models.CharField(max_length=100, default='', unique=True)
     categoria = models.CharField(max_length=10, choices=CATEGORIA_CHOICES)
     estado = models.CharField(max_length=20, choices=ESTADO_CHOICES)
     data_aquisicao = models.DateField(auto_now_add=True) #verificar isso
@@ -24,7 +24,7 @@ class Carrinho(models.Model):
 
 # Classe do Cliente
 class Cliente(models.Model):
-    nome = models.CharField(max_length=100, default='')
+    nome = models.CharField(max_length=100, default='', unique=True)
     email = models.EmailField(default='')
     telefone = models.CharField(max_length=20, default='')
     endereco = models.TextField(default='')

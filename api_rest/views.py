@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.request import Request
 from rest_framework.response import Response
 from .services import (
-    get_all_customers, get_customer_by_nick, create_customer, delete_customer,
+    get_all_customers, get_customer_by_nick, create_customer, delete_customer, delete_customer_by_name,
     get_all_carts, get_cart_by_id, create_cart, update_cart_status, delete_cart,
     get_all_rentals, get_rental_by_id, create_rental, finalize_rental
 )
@@ -25,6 +25,11 @@ def createCustomer(request: Request) -> Response:
 @api_view(['DELETE'])
 def deleteCustomer(request: Request, customer_id: int) -> Response:
     return delete_customer(customer_id)
+
+@api_view(['DELETE'])
+def deleteCustomerByName(request: Request, name: str) -> Response:
+    return delete_customer_by_name(name)
+
 
 
 ########################################################

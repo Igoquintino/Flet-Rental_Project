@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from django.db import DatabaseError
+from django.db.models import Q
 import logging
 
 logger = logging.getLogger(__name__)
@@ -56,12 +57,37 @@ def get_customer_by_nick(nick):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 def create_customer(data):
-    logger.info("Criando novo cliente...")
-    return create_object(ClienteSerializer, data)
+    try:
+        if Cliente.objects.filter(nome=data.get('nome')).exists():
+            return Response({"error": "Cliente com este nome já existe."}, status=status.HTTP_400_BAD_REQUEST)
+        
+        new_customer = Cliente.objects.create(**data)
+        return Response({"id": new_customer.id, "message": "Cliente criado com sucesso."}, status=status.HTTP_201_CREATED)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 def delete_customer(customer_id):
     logger.warning(f"Excluindo cliente com ID {customer_id}...")
     return delete_object(Cliente, customer_id)
+
+def delete_customer_by_name(name: str):
+    try:
+        customer = Cliente.objects.filter(Q(nome=name)).first()
+        
+        # Verifica se o cliente existe
+        if not customer:
+            return Response({"error": "Cliente não encontrado ou já deletado."}, status=status.HTTP_404_NOT_FOUND)
+        
+        customer.delete()
+        
+        customer = Cliente.objects.filter(Q(nome=name)).first()
+        if customer:
+            return Response({"error": "Falha ao deletar o cliente."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response({"message": "Cliente deletado com sucesso."}, status=status.HTTP_200_OK)
+  
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # Serviços relacionados a Carrinhos
